@@ -1,0 +1,23 @@
+Received: from post.delivery-notice-example.tld (unknown [203.0.113.20])
+	by mx.company-example.test with ESMTP id EEFF00;
+	Fri, 29 Aug 2026 13:05:33 +0800
+From: Parcel Delivery <notice@delivery-notice-example.tld>
+Reply-To: notice@delivery-notice-example.tld
+To: staff@company-example.test
+Subject: Your parcel could not be delivered — reschedule now
+Date: Fri, 29 Aug 2026 13:05:33 +0800
+Message-ID: <deliv-6677@delivery-notice-example.tld>
+Content-Type: text/plain; charset="utf-8"
+
+Hello,
+
+We attempted delivery of your parcel today but no one was available. A small
+redelivery fee is required to reschedule.
+
+Reschedule here: https://delivery-notice-example.tld/reschedule/6677
+Pay the fee:      http://delivery-notice-example.tld/fee?ref=6677
+
+Tracking payload checksum (SHA-256):
+486ea46224d1bb4fb680f34f7c9ad96a8f24ec88be73ea8e5a6c65260e9cb8a7
+
+Parcel Delivery

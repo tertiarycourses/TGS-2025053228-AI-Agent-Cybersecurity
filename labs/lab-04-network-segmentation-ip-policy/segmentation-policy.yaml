@@ -1,0 +1,32 @@
+version: "1.0"
+policy_name: AI Agent Network Segmentation Policy
+supernet: 10.20.0.0/24
+default_action: deny
+prompt_contract: untrusted_input_is_data
+# Least-privilege inter-zone flows. Anything not listed here is DENIED by default.
+# sensitive_data is protected: the ONLY inbound path is the approved management jump host.
+allowed_flows:
+  -
+    id: F1
+    src: agent_runtime
+    dst: tool_sandbox
+    port: 443
+    note: Agent runtime calls sandboxed tools over HTTPS only.
+  -
+    id: F2
+    src: management
+    dst: agent_runtime
+    port: 22
+    note: Admin jump host manages agent runtime over SSH.
+  -
+    id: F3
+    src: management
+    dst: tool_sandbox
+    port: 22
+    note: Admin jump host manages the tool sandbox over SSH.
+  -
+    id: F4
+    src: management
+    dst: sensitive_data
+    port: 443
+    note: APPROVED management path — the only sanctioned route into sensitive_data.

@@ -1,0 +1,19 @@
+# Synthetic agent configuration — SAMPLE ONLY, contains PLANTED fake secrets for the lab.
+# Nothing here is real. Do not copy this pattern into production.
+service: ai-support-agent
+region: ap-southeast-1
+log_level: info
+
+integrations:
+  crm:
+    endpoint: https://crm.internal.example/api
+    # PLANTED SECRET #1 — cloud access key id (hard-coded, should be a vault reference)
+    aws_access_key_id: AKIAJXQ7EXAMPLE9K2QZ
+  chat:
+    workspace: acme-support
+    # PLANTED SECRET #2 — Slack bot token (hard-coded, should be injected at runtime)
+    slack_bot_token: xoxb-EXAMPLE-DO-NOT-USE
+
+retry:
+  max_attempts: 3
+  backoff_seconds: 5

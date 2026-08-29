@@ -1,0 +1,6 @@
+system,rto_hours,rpo_minutes,criticality
+Payments API,2,5,critical
+Agent runtime,4,15,high
+Customer DB,6,15,high
+Internal wiki,24,1440,medium
+Reporting,48,1440,low

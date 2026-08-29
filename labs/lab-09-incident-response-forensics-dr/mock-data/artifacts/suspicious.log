@@ -1,0 +1,4 @@
+2026-03-11T22:14:07Z tool=export_records rows=50000 dest=198.51.100.24 status=ok
+2026-03-11T22:14:09Z egress bytes=43012096 label=customer-PII iface=eth0
+2026-03-11T22:15:31Z dlp=ALERT rule=bulk-pii-egress action=logged
+2026-03-11T22:41:50Z soc=isolate host=agent-runtime-01 approval=CHG-4471

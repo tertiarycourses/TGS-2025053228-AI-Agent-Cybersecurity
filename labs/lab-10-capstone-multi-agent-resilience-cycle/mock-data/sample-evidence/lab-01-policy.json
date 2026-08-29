@@ -1,0 +1,18 @@
+{
+  "source_lab": "lab-01-agent-security-policy-trust-boundaries",
+  "domain": "Policy",
+  "learning_outcome": "LO1",
+  "summary": "Agent security policy drafted, linted clean, trust boundary derived.",
+  "maturity_current": 3,
+  "maturity_target": 4,
+  "risk": "medium",
+  "metrics": {
+    "assets_classified": 8,
+    "confidential_assets": 4,
+    "policy_violations_open": 0,
+    "trust_boundary_gaps": 1,
+    "prompt_contract_present": true
+  },
+  "observation": "A machine-checkable policy exists and lints clean, but it is not yet reviewed on a fixed cadence and one skill lacks an explicit trust-boundary entry.",
+  "improvement_hint": "Schedule quarterly policy review and close the outstanding trust-boundary gap."
+}

@@ -1,0 +1,9 @@
+asset,type,classification,owner
+Public website,Web application,Public,IT
+Staff laptops,Endpoints,Internal,IT
+Learner records,Database,Confidential,Operations
+Cloud file share,Storage,Internal,Operations
+Admin account,Identity,Confidential,IT
+Wi-Fi network,Network,Internal,IT
+Agent memory store,Agent memory,Confidential,IT
+Payment tokens,Secret,Confidential,Finance

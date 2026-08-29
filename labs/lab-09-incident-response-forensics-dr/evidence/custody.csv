@@ -1,0 +1,4 @@
+artifact,sha256,size,preserved_at,handler
+export.csv,82710bd3086de9f4ab88a3f03afd2bab41d763f907fa2f206323114f7f85cf76,169,2026-03-12T02:00:00Z,forensics-oncall
+memory-note.txt,a2703debe1ad12f12f7e1ed6ac84dd30e5620a4efacf98916e32c7431d79d0db,271,2026-03-12T02:00:00Z,forensics-oncall
+suspicious.log,766a8dc5ec6ac2cf0cf2247ed9afdf267150cb701f65fefa50045f03314944fb,293,2026-03-12T02:00:00Z,forensics-oncall

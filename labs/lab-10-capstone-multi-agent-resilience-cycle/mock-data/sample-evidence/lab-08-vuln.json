@@ -1,0 +1,18 @@
+{
+  "source_lab": "lab-08-vulnerability-assessment-threat-intelligence-risk",
+  "domain": "Response",
+  "learning_outcome": "LO2",
+  "summary": "Vulnerability assessment, threat-intel enrichment and risk register roll-up.",
+  "maturity_current": 3,
+  "maturity_target": 4,
+  "risk": "high",
+  "metrics": {
+    "findings_total": 42,
+    "critical_open": 3,
+    "high_open": 7,
+    "mean_time_to_remediate_days": 21,
+    "threat_intel_matched": 5
+  },
+  "observation": "A risk register exists and is enriched with threat intel, but three critical findings remain open and remediation time is 21 days.",
+  "improvement_hint": "Prioritise the critical findings and shorten mean-time-to-remediate."
+}

@@ -1,0 +1,213 @@
+{
+  "tool": "ioc_extract.py",
+  "source_dir": "mock-data/phish",
+  "files_scanned": [
+    "mock-data/phish/01-secure-login-reset.eml",
+    "mock-data/phish/02-invoice-overdue.eml",
+    "mock-data/phish/03-account-verify.eml",
+    "mock-data/phish/04-payroll-update.eml",
+    "mock-data/phish/05-delivery-notice.eml"
+  ],
+  "counts_by_type": {
+    "url": 14,
+    "ipv4": 6,
+    "sha256": 4,
+    "sender": 5,
+    "attachment": 3
+  },
+  "total": 32,
+  "iocs": [
+    {
+      "type": "ipv4",
+      "value": "198.51.100.23",
+      "file": "mock-data/phish/01-secure-login-reset.eml",
+      "line": 1
+    },
+    {
+      "type": "ipv4",
+      "value": "203.0.113.44",
+      "file": "mock-data/phish/01-secure-login-reset.eml",
+      "line": 4
+    },
+    {
+      "type": "sender",
+      "value": "secure-login-example.tld",
+      "file": "mock-data/phish/01-secure-login-reset.eml",
+      "line": 7
+    },
+    {
+      "type": "url",
+      "value": "https://secure-login-example.tld/reset?token=8842",
+      "file": "mock-data/phish/01-secure-login-reset.eml",
+      "line": 23
+    },
+    {
+      "type": "url",
+      "value": "http://secure-login-example.tld/verify/session-8842",
+      "file": "mock-data/phish/01-secure-login-reset.eml",
+      "line": 26
+    },
+    {
+      "type": "url",
+      "value": "http://portal.secure-login-example.tld/sso",
+      "file": "mock-data/phish/01-secure-login-reset.eml",
+      "line": 29
+    },
+    {
+      "type": "sha256",
+      "value": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "file": "mock-data/phish/01-secure-login-reset.eml",
+      "line": 33
+    },
+    {
+      "type": "attachment",
+      "value": "Account-Recovery-Form.pdf",
+      "file": "mock-data/phish/01-secure-login-reset.eml",
+      "line": 40
+    },
+    {
+      "type": "ipv4",
+      "value": "198.51.100.77",
+      "file": "mock-data/phish/02-invoice-overdue.eml",
+      "line": 1
+    },
+    {
+      "type": "sender",
+      "value": "evil-example.test",
+      "file": "mock-data/phish/02-invoice-overdue.eml",
+      "line": 4
+    },
+    {
+      "type": "url",
+      "value": "https://evil-example.test/pay/INV-20826",
+      "file": "mock-data/phish/02-invoice-overdue.eml",
+      "line": 19
+    },
+    {
+      "type": "url",
+      "value": "http://evil-example.test/invoice/INV-20826.pdf",
+      "file": "mock-data/phish/02-invoice-overdue.eml",
+      "line": 20
+    },
+    {
+      "type": "url",
+      "value": "https://billing.evil-example.test/dispute",
+      "file": "mock-data/phish/02-invoice-overdue.eml",
+      "line": 21
+    },
+    {
+      "type": "sha256",
+      "value": "5994471abb01112afcc18159f6cc74b4f511b99806da59b3caf5a9c173cacfc5",
+      "file": "mock-data/phish/02-invoice-overdue.eml",
+      "line": 24
+    },
+    {
+      "type": "attachment",
+      "value": "Invoice-INV-20826.pdf.exe",
+      "file": "mock-data/phish/02-invoice-overdue.eml",
+      "line": 32
+    },
+    {
+      "type": "ipv4",
+      "value": "203.0.113.91",
+      "file": "mock-data/phish/03-account-verify.eml",
+      "line": 1
+    },
+    {
+      "type": "sender",
+      "value": "account-verify-example.tld",
+      "file": "mock-data/phish/03-account-verify.eml",
+      "line": 4
+    },
+    {
+      "type": "url",
+      "value": "https://account-verify-example.tld/activity/3310",
+      "file": "mock-data/phish/03-account-verify.eml",
+      "line": 15
+    },
+    {
+      "type": "url",
+      "value": "http://account-verify-example.tld/confirm?u=3310",
+      "file": "mock-data/phish/03-account-verify.eml",
+      "line": 16
+    },
+    {
+      "type": "url",
+      "value": "https://mfa.account-verify-example.tld/enroll",
+      "file": "mock-data/phish/03-account-verify.eml",
+      "line": 17
+    },
+    {
+      "type": "ipv4",
+      "value": "198.51.100.150",
+      "file": "mock-data/phish/04-payroll-update.eml",
+      "line": 1
+    },
+    {
+      "type": "sender",
+      "value": "payroll-example.test",
+      "file": "mock-data/phish/04-payroll-update.eml",
+      "line": 4
+    },
+    {
+      "type": "url",
+      "value": "https://payroll-example.test/bank/update",
+      "file": "mock-data/phish/04-payroll-update.eml",
+      "line": 20
+    },
+    {
+      "type": "url",
+      "value": "http://payroll-example.test/deposit/enroll",
+      "file": "mock-data/phish/04-payroll-update.eml",
+      "line": 21
+    },
+    {
+      "type": "url",
+      "value": "https://payslips.payroll-example.test/archive",
+      "file": "mock-data/phish/04-payroll-update.eml",
+      "line": 22
+    },
+    {
+      "type": "sha256",
+      "value": "2c26b46b68ffc68ff99b453c1d30413413422d706483bfa0f98a5e886266e7ae",
+      "file": "mock-data/phish/04-payroll-update.eml",
+      "line": 26
+    },
+    {
+      "type": "attachment",
+      "value": "Bank-Authorisation.xlsm",
+      "file": "mock-data/phish/04-payroll-update.eml",
+      "line": 32
+    },
+    {
+      "type": "ipv4",
+      "value": "203.0.113.20",
+      "file": "mock-data/phish/05-delivery-notice.eml",
+      "line": 1
+    },
+    {
+      "type": "sender",
+      "value": "delivery-notice-example.tld",
+      "file": "mock-data/phish/05-delivery-notice.eml",
+      "line": 4
+    },
+    {
+      "type": "url",
+      "value": "https://delivery-notice-example.tld/reschedule/6677",
+      "file": "mock-data/phish/05-delivery-notice.eml",
+      "line": 17
+    },
+    {
+      "type": "url",
+      "value": "http://delivery-notice-example.tld/fee?ref=6677",
+      "file": "mock-data/phish/05-delivery-notice.eml",
+      "line": 18
+    },
+    {
+      "type": "sha256",
+      "value": "486ea46224d1bb4fb680f34f7c9ad96a8f24ec88be73ea8e5a6c65260e9cb8a7",
+      "file": "mock-data/phish/05-delivery-notice.eml",
+      "line": 21
+    }
+  ]
+}

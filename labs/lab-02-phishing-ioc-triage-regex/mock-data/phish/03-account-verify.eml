@@ -1,0 +1,22 @@
+Received: from edge.account-verify-example.tld (unknown [203.0.113.91])
+	by mx.company-example.test with ESMTP id 778899;
+	Fri, 29 Aug 2026 11:20:45 +0800
+From: Security Team <alerts@account-verify-example.tld>
+Reply-To: alerts@account-verify-example.tld
+To: staff@company-example.test
+Subject: Unusual sign-in detected on your account
+Date: Fri, 29 Aug 2026 11:20:45 +0800
+Message-ID: <verify-3310@account-verify-example.tld>
+Content-Type: text/plain; charset="utf-8"
+
+We detected a sign-in from a new device. If this was not you, secure your
+account right away.
+
+Review activity:   https://account-verify-example.tld/activity/3310
+Confirm identity:  http://account-verify-example.tld/confirm?u=3310
+Enable protection: https://mfa.account-verify-example.tld/enroll
+
+For your safety, this link expires in 30 minutes. Ignoring this message may
+result in permanent suspension of your mailbox.
+
+Security Team

@@ -1,0 +1,18 @@
+{
+  "source_lab": "lab-04-network-segmentation-ip-policy",
+  "domain": "Network",
+  "learning_outcome": "LO1",
+  "summary": "Network segmentation and IP-policy check with the IP Calculator.",
+  "maturity_current": 4,
+  "maturity_target": 4,
+  "risk": "low",
+  "metrics": {
+    "subnets_reviewed": 6,
+    "overlapping_ranges": 0,
+    "segmentation_violations": 0,
+    "default_deny_egress": true,
+    "management_plane_isolated": true
+  },
+  "observation": "Segmentation is sound: no overlapping ranges, default-deny egress in place and the management plane is isolated. This domain already meets target.",
+  "improvement_hint": "Maintain the current baseline; add drift detection to keep it at target."
+}

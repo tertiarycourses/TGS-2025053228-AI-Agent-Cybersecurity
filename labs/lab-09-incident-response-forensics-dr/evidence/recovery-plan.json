@@ -1,0 +1,70 @@
+{
+  "plan": "agent-incident-disaster-recovery",
+  "systems": [
+    {
+      "system": "Payments API",
+      "rto_hours": 2,
+      "rpo_minutes": 5,
+      "criticality": "critical",
+      "backup_frequency": {
+        "interval_minutes": 5,
+        "description": "back up every 5 minute(s)"
+      }
+    },
+    {
+      "system": "Agent runtime",
+      "rto_hours": 4,
+      "rpo_minutes": 15,
+      "criticality": "high",
+      "backup_frequency": {
+        "interval_minutes": 15,
+        "description": "back up every 15 minute(s)"
+      }
+    },
+    {
+      "system": "Customer DB",
+      "rto_hours": 6,
+      "rpo_minutes": 15,
+      "criticality": "high",
+      "backup_frequency": {
+        "interval_minutes": 15,
+        "description": "back up every 15 minute(s)"
+      }
+    },
+    {
+      "system": "Internal wiki",
+      "rto_hours": 24,
+      "rpo_minutes": 1440,
+      "criticality": "medium",
+      "backup_frequency": {
+        "interval_minutes": 1440,
+        "description": "back up every 1 day(s)"
+      }
+    },
+    {
+      "system": "Reporting",
+      "rto_hours": 48,
+      "rpo_minutes": 1440,
+      "criticality": "low",
+      "backup_frequency": {
+        "interval_minutes": 1440,
+        "description": "back up every 1 day(s)"
+      }
+    }
+  ],
+  "restore_order": [
+    "Payments API",
+    "Agent runtime",
+    "Customer DB",
+    "Internal wiki",
+    "Reporting"
+  ],
+  "restore_order_rto_hours": [
+    2,
+    4,
+    6,
+    24,
+    48
+  ],
+  "notes": "Restore order is RTO ascending; each system is backed up at least once per RPO window."
+}

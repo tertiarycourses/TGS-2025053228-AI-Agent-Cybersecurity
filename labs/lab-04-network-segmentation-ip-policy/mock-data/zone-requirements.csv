@@ -1,0 +1,5 @@
+zone,description,required_hosts
+agent_runtime,Agent runtime (LLM workers + orchestrator),30
+tool_sandbox,Tool sandbox (isolated tool/code execution),14
+sensitive_data,Sensitive data (records + secrets store),6
+management,Management (admin jump host + approval console),2

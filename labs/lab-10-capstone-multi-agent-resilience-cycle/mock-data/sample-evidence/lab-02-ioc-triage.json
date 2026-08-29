@@ -1,0 +1,18 @@
+{
+  "source_lab": "lab-02-phishing-ioc-triage-regex",
+  "domain": "Monitoring",
+  "learning_outcome": "LO2",
+  "summary": "Phishing / IOC triage over synthetic mailbox using regex extractors.",
+  "maturity_current": 2,
+  "maturity_target": 4,
+  "risk": "high",
+  "metrics": {
+    "messages_triaged": 120,
+    "iocs_extracted": 37,
+    "confirmed_phish": 9,
+    "false_positive_rate_pct": 18,
+    "auto_enrichment": false
+  },
+  "observation": "IOC extraction works but triage is manual, the false-positive rate is high, and there is no automated enrichment or alert deduplication.",
+  "improvement_hint": "Add enrichment + dedup and tune extractors to cut the false-positive rate."
+}

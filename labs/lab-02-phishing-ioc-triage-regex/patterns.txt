@@ -1,0 +1,16 @@
+# patterns.txt — regex catalogue for ioc_extract.py (Python `re`, standard library).
+#
+# Format: one indicator per line as  <type>=<regex>
+# Blank lines and lines starting with '#' are ignored.
+# Supported types (the four the deck shows): url, ipv4, sha256, sender.
+#
+# Notes on the design (why each pattern is scoped tightly, to avoid phantom hits):
+#   url    — only http/https links; \S+ stops at whitespace, so trailing text is excluded.
+#   ipv4   — dotted-quad with word boundaries; will not match inside hex hashes or dates.
+#   sha256 — exactly 64 lowercase-hex chars with word boundaries (a real SHA-256 digest).
+#   sender — matches the From: header and CAPTURES the domain in group 1 (one per email).
+#
+url=https?://[^\s<>"']+
+ipv4=\b(?:(?:25[0-5]|2[0-4][0-9]|1[0-9][0-9]|[1-9]?[0-9])\.){3}(?:25[0-5]|2[0-4][0-9]|1[0-9][0-9]|[1-9]?[0-9])\b
+sha256=\b[a-f0-9]{64}\b
+sender=^From:.*@([A-Za-z0-9.-]+\.[A-Za-z]{2,})>?\s*$

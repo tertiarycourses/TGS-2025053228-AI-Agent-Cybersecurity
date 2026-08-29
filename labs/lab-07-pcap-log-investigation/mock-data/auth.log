@@ -1,0 +1,12 @@
+2026-07-06T09:05:12 AUTH SUCCESS user=jchan source=10.0.1.25 method=password host=workstation-25
+2026-07-06T09:08:44 AUTH SUCCESS user=priya source=10.0.1.31 method=sso host=workstation-31
+2026-07-06T09:11:05 AUTH FAILURE user=administrator source=198.51.100.45 reason=blocked_by_segmentation host=rdp-gw
+2026-07-06T09:11:41 AUTH FAILURE user=administrator source=198.51.100.45 reason=blocked_by_segmentation host=rdp-gw
+2026-07-06T09:12:19 AUTH FAILURE user=admin source=198.51.100.45 reason=blocked_by_segmentation host=rdp-gw
+2026-07-06T09:12:57 AUTH FAILURE user=admin source=198.51.100.45 reason=blocked_by_segmentation host=rdp-gw
+2026-07-06T09:13:35 AUTH FAILURE user=Administrator source=198.51.100.45 reason=blocked_by_segmentation host=rdp-gw
+2026-07-06T09:14:10 AUTH SUCCESS user=itops source=10.0.1.5 method=password host=jump-host
+2026-07-06T09:22:03 AUTH FAILURE user=root source=203.0.113.5 reason=invalid_password host=linux-11
+2026-07-06T09:26:31 AUTH FAILURE user=root source=198.51.100.200 reason=invalid_password host=linux-11
+2026-07-06T09:41:52 AUTH SUCCESS user=jchan source=10.0.1.25 method=password host=workstation-25
+2026-07-06T10:03:18 AUTH SUCCESS user=priya source=10.0.1.31 method=sso host=fileshare

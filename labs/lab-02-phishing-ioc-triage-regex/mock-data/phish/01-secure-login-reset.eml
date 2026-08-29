@@ -1,0 +1,44 @@
+Received: from mail.secure-login-example.tld (unknown [198.51.100.23])
+	by mx.company-example.test with ESMTP id A1B2C3;
+	Fri, 29 Aug 2026 09:14:02 +0800
+Received: from relay.secure-login-example.tld ([203.0.113.44])
+	by mail.secure-login-example.tld with SMTP;
+	Fri, 29 Aug 2026 09:13:58 +0800
+From: IT Service Desk <no-reply@secure-login-example.tld>
+Reply-To: helpdesk@secure-login-example.tld
+To: staff@company-example.test
+Subject: [ACTION REQUIRED] Your password expires in 2 hours
+Date: Fri, 29 Aug 2026 09:14:02 +0800
+Message-ID: <reset-8842@secure-login-example.tld>
+Content-Type: multipart/mixed; boundary="b1"
+
+--b1
+Content-Type: text/plain; charset="utf-8"
+
+Dear User,
+
+Our records show your mailbox password will expire today. To keep your
+account active, verify it now using the secure portal below:
+
+  https://secure-login-example.tld/reset?token=8842
+
+If the button does not load, copy this backup link:
+  http://secure-login-example.tld/verify/session-8842
+
+Failure to act will lock your account. This request originated from the
+approved gateway http://portal.secure-login-example.tld/sso and must be
+completed within 2 hours.
+
+Attached is the account recovery form (SHA-256 recorded by our scanner:
+e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855).
+
+Regards,
+IT Service Desk
+
+--b1
+Content-Type: application/pdf; name="Account-Recovery-Form.pdf"
+Content-Disposition: attachment; filename="Account-Recovery-Form.pdf"
+Content-Transfer-Encoding: base64
+
+JVBERi0xLjQKJ2Z0ZXN0Cg==
+--b1--

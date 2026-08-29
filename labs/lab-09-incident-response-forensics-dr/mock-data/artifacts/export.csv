@@ -1,0 +1,4 @@
+record_id,customer,field,value
+1001,SYNTHETIC-A,email,user-a@example.invalid
+1002,SYNTHETIC-B,email,user-b@example.invalid
+1003,SYNTHETIC-C,email,user-c@example.invalid

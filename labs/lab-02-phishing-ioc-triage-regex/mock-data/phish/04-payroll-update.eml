@@ -1,0 +1,36 @@
+Received: from gw.payroll-example.test (unknown [198.51.100.150])
+	by mx.company-example.test with ESMTP id AABBCC;
+	Fri, 29 Aug 2026 12:41:19 +0800
+From: HR Payroll <payroll@payroll-example.test>
+Reply-To: payroll@payroll-example.test
+To: staff@company-example.test
+Subject: Update your bank details before this month's payroll run
+Date: Fri, 29 Aug 2026 12:41:19 +0800
+Message-ID: <pay-5521@payroll-example.test>
+Content-Type: multipart/mixed; boundary="d3"
+
+--d3
+Content-Type: text/plain; charset="utf-8"
+
+Hi,
+
+Payroll is being processed today. Confirm or update your bank account to
+ensure you are paid on time.
+
+Update details:   https://payroll-example.test/bank/update
+Direct deposit:   http://payroll-example.test/deposit/enroll
+Payslip archive:  https://payslips.payroll-example.test/archive
+
+Complete the attached authorisation form and it will be applied automatically.
+Scanner reference (SHA-256):
+2c26b46b68ffc68ff99b453c1d30413413422d706483bfa0f98a5e886266e7ae
+
+HR Payroll
+
+--d3
+Content-Type: application/vnd.ms-excel; name="Bank-Authorisation.xlsm"
+Content-Disposition: attachment; filename="Bank-Authorisation.xlsm"
+Content-Transfer-Encoding: base64
+
+UEsDBBQABgAIAAAAIQBi7p1oXg==
+--d3--

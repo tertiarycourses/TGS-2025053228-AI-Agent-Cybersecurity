@@ -1,0 +1,17 @@
+{
+  "app": "ai-support-agent",
+  "telemetry": true,
+  "model": {
+    "name": "assistant-small",
+    "temperature": 0.2
+  },
+  "provider": {
+    "base_url": "https://api.model.example/v1",
+    "api_key": "sk-live-9f8e7d6c5b4a3d2e1f0aEXAMPLE0011223344",
+    "org": "acme"
+  },
+  "signing": {
+    "note": "PLANTED SECRET #5 follows — a hard-coded private key block",
+    "private_key": "-----BEGIN RSA PRIVATE KEY-----\nMIIEowIBAAKCAQEA0EXAMPLEFAKEKEYDONOTUSE1234567890abcdefghijkLMNOP\n-----END RSA PRIVATE KEY-----"
+  }
+}

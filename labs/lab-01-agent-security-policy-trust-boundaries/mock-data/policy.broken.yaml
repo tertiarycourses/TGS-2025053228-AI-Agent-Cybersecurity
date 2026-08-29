@@ -1,0 +1,34 @@
+version: "3.0"
+policy_name: AI Agent Security Policy (deliberately broken for the verifier)
+assets:
+  -
+    name: learner_records
+    classification: Confidential
+    owner: Operations
+    controls:
+      - access
+    agent_tools:
+      - read_records
+    state_changing: true
+    human_approval: required
+  -
+    name: agent_memory_store
+    classification: Confidential
+    owner: IT
+    controls:
+      - access
+      - crypto
+    agent_tools:
+      - read_memory
+    state_changing: true
+    human_approval: not_required
+  -
+    name: public_website
+    classification: Public
+    owner: IT
+    controls:
+      - access
+    agent_tools:
+      - read_public
+    state_changing: false
+    human_approval: not_required

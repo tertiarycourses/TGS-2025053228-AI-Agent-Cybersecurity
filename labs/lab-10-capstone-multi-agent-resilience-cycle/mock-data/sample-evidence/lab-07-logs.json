@@ -1,0 +1,18 @@
+{
+  "source_lab": "lab-07-pcap-log-investigation",
+  "domain": "Monitoring",
+  "learning_outcome": "LO2",
+  "summary": "Packet-capture and system-log investigation of a synthetic incident.",
+  "maturity_current": 2,
+  "maturity_target": 4,
+  "risk": "medium",
+  "metrics": {
+    "pcaps_reviewed": 3,
+    "log_sources_correlated": 4,
+    "detections_confirmed": 2,
+    "blind_spots": 2,
+    "retention_days": 14
+  },
+  "observation": "Investigation confirmed two detections but surfaced two logging blind spots and short (14-day) retention.",
+  "improvement_hint": "Close logging blind spots and extend retention to support investigations."
+}

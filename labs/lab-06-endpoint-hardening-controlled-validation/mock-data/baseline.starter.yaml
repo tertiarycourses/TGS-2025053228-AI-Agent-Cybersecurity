@@ -1,0 +1,31 @@
+version: "1.0"
+baseline_name: BYOD / Remote-Work Endpoint Hardening Baseline
+# The five K2 endpoint-hardening controls. Each is REQUIRED (required: true).
+# harden_check --score reads this file to know which controls must pass, and
+# verify.py asserts the baseline covers all five.
+controls:
+  -
+    id: patching
+    title: OS & application patching current
+    required: true
+    risk: Unpatched BYOD/remote laptops are exploited via known CVEs off the corporate network.
+  -
+    id: host_firewall
+    title: Host firewall enabled
+    required: true
+    risk: Without a host firewall a remote endpoint accepts inbound connections on untrusted networks.
+  -
+    id: disk_encryption
+    title: Full-disk encryption enabled
+    required: true
+    risk: A lost or stolen BYOD device leaks data at rest when the disk is not encrypted.
+  -
+    id: mfa_rdp
+    title: MFA enforced for RDP / remote access
+    required: true
+    risk: Single-factor RDP is brute-forced/credential-stuffed for remote-work initial access.
+  -
+    id: app_allowlist
+    title: Application allow-listing enforced
+    required: true
+    risk: Without allow-listing, BYOD endpoints run unmanaged or malicious software.

@@ -1,0 +1,13 @@
+item,type
+user_login_password,password
+admin_login_password,password
+file_download_checksum,integrity
+audit_log_digest,integrity
+customer_email,pii
+national_id_number,pii
+home_address,pii
+credit_card_number,confidential
+oauth_client_secret,secret
+agent_api_key,secret
+session_token,secret
+marketing_slogan,public

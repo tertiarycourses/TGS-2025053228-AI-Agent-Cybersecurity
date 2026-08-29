@@ -1,0 +1,18 @@
+{
+  "source_lab": "lab-06-endpoint-hardening-controlled-validation",
+  "domain": "Access/Crypto",
+  "learning_outcome": "LO1",
+  "summary": "Endpoint hardening with controlled validation of the applied baseline.",
+  "maturity_current": 3,
+  "maturity_target": 4,
+  "risk": "medium",
+  "metrics": {
+    "endpoints_assessed": 12,
+    "baseline_pass_pct": 75,
+    "unmanaged_admin_rights": 3,
+    "disk_encryption_pct": 90,
+    "patch_current_pct": 85
+  },
+  "observation": "Most endpoints pass the baseline, but three retain unmanaged admin rights and patch currency is below target.",
+  "improvement_hint": "Remove unmanaged admin rights and raise patch currency across the fleet."
+}

@@ -1,0 +1,83 @@
+version: "1.0"
+policy_name: AI Agent Compliance Policy
+prompt_contract: untrusted_input_is_data
+
+# --- Which tools each agent is allowed to call (its allow-list) -------------
+# An action whose tool is NOT in the acting agent's allow-list is out-of-scope
+# and is flagged CRITICAL by compliance_check.py.
+agents:
+  -
+    name: hermes
+    role: triage
+    allowed_tools:
+      - read_log
+      - read_records
+      - read_public
+      - read_memory
+  -
+    name: openclaw
+    role: operations
+    allowed_tools:
+      - read_files
+      - read_public
+      - write_ticket
+
+# --- Assets the agents may touch, and the controls each requires ------------
+# classification: Confidential data needs a control recorded on every action.
+# state_changing: true  => the action mutates state and needs human approval.
+# human_approval: required => an approval must be present or it is CRITICAL.
+assets:
+  -
+    name: learner_records
+    classification: Confidential
+    owner: Operations
+    state_changing: true
+    human_approval: required
+  -
+    name: admin_account
+    classification: Confidential
+    owner: IT
+    state_changing: true
+    human_approval: required
+  -
+    name: agent_memory_store
+    classification: Confidential
+    owner: IT
+    state_changing: false
+    human_approval: not_required
+  -
+    name: payment_tokens
+    classification: Confidential
+    owner: Finance
+    state_changing: true
+    human_approval: required
+  -
+    name: cloud_file_share
+    classification: Internal
+    owner: Operations
+    state_changing: false
+    human_approval: not_required
+  -
+    name: ticket_queue
+    classification: Internal
+    owner: Operations
+    state_changing: true
+    human_approval: not_required
+  -
+    name: wifi_network
+    classification: Internal
+    owner: IT
+    state_changing: false
+    human_approval: not_required
+  -
+    name: public_website
+    classification: Public
+    owner: IT
+    state_changing: false
+    human_approval: not_required
+  -
+    name: audit_log
+    classification: Public
+    owner: IT
+    state_changing: false
+    human_approval: not_required

@@ -1,0 +1,7 @@
+src_zone,dst_zone,port,action
+agent_runtime,tool_sandbox,443,ALLOW
+management,agent_runtime,22,ALLOW
+management,tool_sandbox,22,ALLOW
+management,sensitive_data,443,ALLOW
+agent_runtime,sensitive_data,443,DENY
+tool_sandbox,sensitive_data,5432,ALLOW

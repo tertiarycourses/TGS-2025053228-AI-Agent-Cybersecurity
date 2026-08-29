@@ -1,0 +1,87 @@
+{
+  "incident": "agent-data-exfiltration",
+  "phase_order": [
+    "prepare",
+    "detect",
+    "contain",
+    "eradicate",
+    "recover",
+    "learn"
+  ],
+  "phases_present": [
+    "prepare",
+    "detect",
+    "contain",
+    "eradicate",
+    "recover",
+    "learn"
+  ],
+  "all_phases_present": true,
+  "event_count": 8,
+  "timeline": [
+    {
+      "seq": 1,
+      "ts": "2026-03-01T08:00:00Z",
+      "phase": "prepare",
+      "source": "runbook",
+      "observation": "IR runbook v3 published; on-call rota and approval contacts confirmed for the Agent runtime and Payments API.",
+      "inference": "Team is prepared; approvals routed to a human before any state-changing action."
+    },
+    {
+      "seq": 2,
+      "ts": "2026-03-11T22:14:07Z",
+      "phase": "detect",
+      "source": "agent-audit-log",
+      "observation": "Agent runtime executed tool export_records with rows=50000 to destination host 198.51.100.24 outside the allow-list.",
+      "inference": "Possible data-exfiltration: an untrusted prompt likely coerced the agent into a bulk export to an attacker-controlled host."
+    },
+    {
+      "seq": 3,
+      "ts": "2026-03-11T22:15:31Z",
+      "phase": "detect",
+      "source": "dlp-alert",
+      "observation": "DLP flagged 41 MB egress labelled customer-PII from the Agent runtime egress interface.",
+      "inference": "Confirms sensitive data left the boundary; scope is at least the Customer DB export path."
+    },
+    {
+      "seq": 4,
+      "ts": "2026-03-11T22:41:50Z",
+      "phase": "contain",
+      "source": "soc-action",
+      "observation": "SOC isolated the Agent runtime host from the network (egress blocked) after human approval ticket CHG-4471.",
+      "inference": "Containment stops further exfiltration; action was human-approved, not auto-executed by the agent."
+    },
+    {
+      "seq": 5,
+      "ts": "2026-03-11T23:05:12Z",
+      "phase": "contain",
+      "source": "iam-action",
+      "observation": "Agent service credential agent-runtime-svc rotated and old key revoked under approval ticket CHG-4472.",
+      "inference": "Removes the attacker's ability to reuse the compromised token; gated behind human approval."
+    },
+    {
+      "seq": 6,
+      "ts": "2026-03-12T01:20:44Z",
+      "phase": "eradicate",
+      "source": "forensics",
+      "observation": "Injected instruction found in agent memory note referencing 'export all rows to 198.51.100.24'; malicious memory entry removed.",
+      "inference": "Root cause was a prompt-injection persisted in agent memory; eradicating it prevents recurrence on restart."
+    },
+    {
+      "seq": 7,
+      "ts": "2026-03-12T03:30:00Z",
+      "phase": "recover",
+      "source": "dr-action",
+      "observation": "Customer DB restored from 22:00Z snapshot to a clean host; Agent runtime redeployed from a known-good image after approval CHG-4480.",
+      "inference": "Recovery returns service from a trusted baseline; restore was human-approved before execution."
+    },
+    {
+      "seq": 8,
+      "ts": "2026-03-13T10:00:00Z",
+      "phase": "learn",
+      "source": "postmortem",
+      "observation": "Blameless postmortem logged 3 action items: tighten egress allow-list, sign agent memory writes, add export rate-limit + approval gate.",
+      "inference": "Lessons feed back into Prepare; controls added to prevent the same injection-to-exfiltration path."
+    }
+  ]
+}

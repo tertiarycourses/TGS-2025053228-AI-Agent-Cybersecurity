@@ -1,0 +1,88 @@
+version: "3.0"
+policy_name: AI Agent Security Policy
+prompt_contract: untrusted_input_is_data
+assets:
+  -
+    name: learner_records
+    classification: Confidential
+    owner: Operations
+    controls:
+      - access
+      - crypto
+    agent_tools:
+      - read_records
+    state_changing: true
+    human_approval: required
+  -
+    name: admin_account
+    classification: Confidential
+    owner: IT
+    controls:
+      - access
+      - crypto
+    agent_tools:
+      - none
+    state_changing: true
+    human_approval: required
+  -
+    name: agent_memory_store
+    classification: Confidential
+    owner: IT
+    controls:
+      - access
+      - crypto
+    agent_tools:
+      - read_memory
+    state_changing: true
+    human_approval: required
+  -
+    name: payment_tokens
+    classification: Confidential
+    owner: Finance
+    controls:
+      - access
+      - crypto
+    agent_tools:
+      - none
+    state_changing: true
+    human_approval: required
+  -
+    name: cloud_file_share
+    classification: Internal
+    owner: Operations
+    controls:
+      - access
+    agent_tools:
+      - read_files
+    state_changing: false
+    human_approval: not_required
+  -
+    name: staff_laptops
+    classification: Internal
+    owner: IT
+    controls:
+      - access
+    agent_tools:
+      - none
+    state_changing: false
+    human_approval: not_required
+  -
+    name: wifi_network
+    classification: Internal
+    owner: IT
+    controls:
+      - access
+    agent_tools:
+      - none
+    state_changing: false
+    human_approval: not_required
+  -
+    name: public_website
+    classification: Public
+    owner: IT
+    controls:
+      - access
+    agent_tools:
+      - read_public
+    state_changing: false
+    human_approval: not_required

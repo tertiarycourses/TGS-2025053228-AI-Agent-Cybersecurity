@@ -1,0 +1,18 @@
+{
+  "source_lab": "lab-05-agent-compliance-monitoring-alert-triage",
+  "domain": "Monitoring",
+  "learning_outcome": "LO2",
+  "summary": "Agent compliance monitoring and alert triage over synthetic events.",
+  "maturity_current": 2,
+  "maturity_target": 4,
+  "risk": "high",
+  "metrics": {
+    "controls_checked": 24,
+    "compliance_violations": 5,
+    "alerts_triaged": 60,
+    "mean_time_to_triage_min": 45,
+    "coverage_pct": 65
+  },
+  "observation": "Monitoring coverage is only 65 percent, five compliance violations are open and mean-time-to-triage is high; this is the weakest domain.",
+  "improvement_hint": "Raise monitoring coverage, close compliance violations and reduce time-to-triage."
+}

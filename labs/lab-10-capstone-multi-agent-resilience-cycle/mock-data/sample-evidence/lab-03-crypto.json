@@ -1,0 +1,18 @@
+{
+  "source_lab": "lab-03-identity-secrets-encryption-crypto",
+  "domain": "Access/Crypto",
+  "learning_outcome": "LO1",
+  "summary": "Identity, secrets and encryption review on the FauxBank sample.",
+  "maturity_current": 3,
+  "maturity_target": 4,
+  "risk": "high",
+  "metrics": {
+    "accounts_reviewed": 15,
+    "mfa_enabled_pct": 80,
+    "weak_password_hashes": 2,
+    "plaintext_secrets_found": 1,
+    "keys_rotated_within_policy_pct": 70
+  },
+  "observation": "MFA and encryption are largely in place, but two weak hashes, one plaintext secret and stale key rotation remain.",
+  "improvement_hint": "Enforce MFA to 100 percent, remove the plaintext secret and rotate stale keys."
+}

@@ -1,0 +1,18 @@
+{
+  "source_lab": "lab-09-incident-handling-forensics-disaster-recovery",
+  "domain": "Recovery",
+  "learning_outcome": "LO3",
+  "summary": "Incident handling, forensics and disaster-recovery (IR/DR) exercise summary.",
+  "maturity_current": 2,
+  "maturity_target": 3,
+  "risk": "high",
+  "metrics": {
+    "ir_playbooks": 2,
+    "dr_tested_last_days": 400,
+    "rto_hours": 24,
+    "rpo_hours": 12,
+    "backups_restorable_pct": 80
+  },
+  "observation": "IR playbooks exist but DR was last tested over a year ago, RTO/RPO are unvalidated and only 80 percent of backups verified restorable.",
+  "improvement_hint": "Run a DR test, validate RTO/RPO and verify backup restorability."
+}

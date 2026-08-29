@@ -1,0 +1,36 @@
+Received: from smtp.evil-example.test (unknown [198.51.100.77])
+	by mx.company-example.test with ESMTP id D4E5F6;
+	Fri, 29 Aug 2026 10:02:11 +0800
+From: "Accounts Payable" <billing@evil-example.test>
+Reply-To: billing@evil-example.test
+To: finance@company-example.test
+Subject: Overdue invoice INV-20826 — final notice before legal action
+Date: Fri, 29 Aug 2026 10:02:11 +0800
+Message-ID: <inv-20826@evil-example.test>
+Content-Type: multipart/mixed; boundary="c2"
+
+--c2
+Content-Type: text/plain; charset="utf-8"
+
+Hello,
+
+Invoice INV-20826 remains unpaid. Settle immediately to avoid escalation.
+
+Pay online:            https://evil-example.test/pay/INV-20826
+Download the invoice:  http://evil-example.test/invoice/INV-20826.pdf
+Dispute this charge:   https://billing.evil-example.test/dispute
+
+Payment gateway confirmation hash for our records:
+5994471abb01112afcc18159f6cc74b4f511b99806da59b3caf5a9c173cacfc5
+
+Do not ignore this notice.
+
+Accounts Payable
+
+--c2
+Content-Type: application/octet-stream; name="Invoice-INV-20826.pdf.exe"
+Content-Disposition: attachment; filename="Invoice-INV-20826.pdf.exe"
+Content-Transfer-Encoding: base64
+
+TVqQAAMAAAAEAAAA//8AALg=
+--c2--
