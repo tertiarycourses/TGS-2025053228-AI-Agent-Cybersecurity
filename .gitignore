@@ -8,7 +8,11 @@
 .DS_Store
 assessment/
 reference/
-courseware/
+# build intermediates (the deck, LP and LG in courseware/ are published)
+courseware/assets/
+courseware/slide_map.json
+courseware/technical_anchor_inventory.*
+courseware/archive/
 *.pem
 !labs/**/agent-cert.pem
 *.key

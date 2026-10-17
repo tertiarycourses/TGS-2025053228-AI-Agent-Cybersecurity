@@ -5,6 +5,22 @@ Course code: **TGS-2025053228**
 
 The ten progressive labs show how to secure AI agents such as OpenClaw and Hermes across policy design, prompt-injection defence, least-privilege tools, secrets, monitoring, network evidence, incident response and human-governed continuous improvement.
 
+| Course detail | Information |
+|---|---|
+| Course code | `TGS-2025053228` |
+| Programme | WSQ |
+| Duration | 2 days · 16 hours (incl. 2-hour assessment) |
+| Registration | [View course details and register](https://www.tertiarycourses.com.sg/wsq-ai-agent-cybersecurity.html) |
+| Funding | Up to 70% course-fee funding for eligible Singapore Citizens and PRs (50% baseline; 70% for SME-sponsored learners and Singapore Citizens aged 40+), as shown on the official course page. Eligibility and terms apply. |
+
+## Courseware
+
+- [Slide deck (PPTX)](courseware/AI-Agent-Cybersecurity-v3.0.pptx) · [PDF](courseware/AI-Agent-Cybersecurity-v3.0.pdf)
+- [Learner Guide (DOCX)](courseware/LG-AI-Agent-Cybersecurity.docx) · [PDF](courseware/LG-AI-Agent-Cybersecurity.pdf)
+- [Lesson Plan (DOCX)](courseware/LP-AI-Agent-Cybersecurity.docx) · [PDF](courseware/LP-AI-Agent-Cybersecurity.pdf)
+
+Assessment material and source references are confidential and are not published in this repository.
+
 ## Labs
 
 Each lab has its own folder and contains:
